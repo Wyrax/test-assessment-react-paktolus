@@ -1,2 +1,1 @@
-# test-assessment-react-paktolus
-Test assessment for Paktolus company
+# React test assessment (Paktolus company)
