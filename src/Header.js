@@ -6,10 +6,10 @@ import Box from '@material-ui/core/Box';
 function Header() { // Avatar must be replaced by module login/avatar
 
   return (
-    <div style={{ width: '100%', alignItems: 'center' }}>
+    <div style={{ width: '100%' }}>
       <Box display="flex" textAlign="left" p={1} bgcolor="background.paper">
         <Box display="flex" p={1} flexGrow={1} style={{ alignItems: 'center' }}>
-          <img src={logo} style={{ height: '50px'}}></img>
+          <img src={logo} alt="logo" style={{ height: '50px'}}></img>
         </Box>
         <Box display="flex" p={1} style={{ alignItems: 'center' }}>
           $42.00
