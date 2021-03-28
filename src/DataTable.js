@@ -32,31 +32,32 @@ const columns = [
   }
 ];
 
-const rows = [
-   { id: 1, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
-   { id: 2, slot1: 0, slot2: 0, slot3: 0, time: '33:36' },
-   { id: 3, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
-   { id: 4, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
-   { id: 5, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
-   { id: 6, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
-   { id: 7, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
-   { id: 8, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
-   { id: 9, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
-  { id: 10, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
-  { id: 11, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
-  { id: 12, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
-  { id: 13, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
-  { id: 14, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
-  { id: 15, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
-  { id: 16, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
-  { id: 17, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
-  { id: 18, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
-  { id: 19, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
-  { id: 20, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
+// const rows = [
+//    { id: 1, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
+//    { id: 2, slot1: 0, slot2: 0, slot3: 0, time: '33:36' },
+//    { id: 3, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
+//    { id: 4, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
+//    { id: 5, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
+//    { id: 6, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
+//    { id: 7, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
+//    { id: 8, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
+//    { id: 9, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
+//   { id: 10, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
+//   { id: 11, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
+//   { id: 12, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
+//   { id: 13, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
+//   { id: 14, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
+//   { id: 15, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
+//   { id: 16, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
+//   { id: 17, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
+//   { id: 18, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
+//   { id: 19, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
+//   { id: 20, slot1: 0, slot2: 0, slot3: 0, time: '35:36' },
 
-];
+// ];
 
-export default function DataTable() {
+export default function DataTable(props) {
+  const { rows } = props;
   return(
     <Box
       display="flex"

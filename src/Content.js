@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import DataTable from './DataTable';
+import GameDialog from './GameDialog';
 // import { DataGrid } from '@material-ui/data-grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -7,15 +8,13 @@ import Icon from '@material-ui/core/Icon';
 import DeleteIcon from '@material-ui/icons/Delete';
 
 function Content() {
-
-  // const classes = useStyles();
+  const [rows, setRows] = useState([]);
 
   return (
     <div>
-    {/* <div className={classes.root}> */}
       <h3>Slots</h3>
-      <Button variant="contained" color="primary" startIcon={<DeleteIcon />} style={{ marginBottom: '20px' }}>Start</Button>
-      <DataTable></DataTable>
+      <GameDialog rows={rows} setRows={setRows}></GameDialog>
+      <DataTable rows={rows}></DataTable>
     </div>
   );
 
