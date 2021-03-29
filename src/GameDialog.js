@@ -54,7 +54,7 @@ const DialogActions = withStyles((theme) => ({
 export default function GameDialog(props) {
   const [open, setOpen] = React.useState(false);
 
-  let { rows, setRows } = props;
+  const { rows, setRows, balance, setBalance } = props;
 
   const handleClickStart = () => {
     setOpen(true);
@@ -70,13 +70,21 @@ export default function GameDialog(props) {
 
     if (slot1val === 7 && slot2val === 7 && slot3val === 7) {
       status.innerHTML = '777 JACKPOT! (+$10)';
+      // let !!!
+      setBalance(balance + 10);
+      localStorage.setItem("balance", balance + 10);
     } else if (slot1val === slot2val && slot2val === slot3val) {
       status.innerHTML = 'THREE IN A ROW! (+$5)';
+      setBalance(balance + 5);
+      localStorage.setItem("balance", balance + 5);
     } else if (slot1val === slot2val || slot2val === slot3val) {
       status.innerHTML = 'PAIR! (+$0.5)';
+      setBalance(balance + .5);
+      localStorage.setItem("balance", balance + .5);
     } else {
       status.innerHTML = 'Choose your action:';
     }
+    // console.log(`balance after all = ${parseFloat(localStorage.getItem("balance"))}`);
 
     row.id = rows.length + 1;
     row.slot1 = slot1val;
@@ -89,6 +97,12 @@ export default function GameDialog(props) {
   }
 
   const handleClickPlay = () => {
+    // console.log(`balance before click = ${balance}`);
+    setBalance(balance - 1);
+    localStorage.setItem("balance", balance - 1);
+    // console.log(`balance before = ${parseFloat(localStorage.getItem("balance"))}`);
+    // console.log(`balance after click = ${balance-1}`);
+
     const gameslot1 = document.getElementById('gameslot-1');
     const gameslot2 = document.getElementById('gameslot-2');
     const gameslot3 = document.getElementById('gameslot-3');
@@ -124,6 +138,9 @@ export default function GameDialog(props) {
   };
 
   const handleClickFake = () => {
+    setBalance(balance - 1);
+    localStorage.setItem("balance", balance - 1);
+    
     const gameslot1 = document.getElementById('gameslot-1');
     const gameslot2 = document.getElementById('gameslot-2');
     const gameslot3 = document.getElementById('gameslot-3');
