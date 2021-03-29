@@ -1,4 +1,6 @@
 import React, { Component, useState } from 'react';
+// import React from 'react';
+// import useState from 'react-usestateref';
 import DataTable from './DataTable';
 import GameDialog from './GameDialog';
 // import { DataGrid } from '@material-ui/data-grid';
@@ -10,7 +12,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 function Content(props) {
   const [rows, setRows] = useState([]);
   const { balance, setBalance } = props;
-  
+  // console.log(`Content > ref.current = ${ref.current}`);
 
   return (
     <div>
